@@ -1,8 +1,9 @@
-let table = [1,2,5,7,684512,23,0,654,8];
+let tableNum = [1,2,5,7,684512,23,0,654,8];
+let tableStrings = ["sbfg", "zgdnnh", "ugfmlkdfblpns","za", "wzexrctubyiregfdghsdf"];
 
 function bigger (table){
     let isBigger = 0;
-
+    console.log(typeof(table));
     for (const value of table) {
         if(value > isBigger){
             isBigger = value;
@@ -11,4 +12,18 @@ function bigger (table){
     return isBigger;
 }
 
-console.log(bigger(table));
+function isIntArray(table){
+    for (const value of table) {
+        return (typeof(value) !== "number") ? false : true;
+    }
+}
+
+function isStringArray(table){
+    for (const value of table) {
+        return (typeof(value) !== "string") ? false : true;
+    }
+}
+
+console.log(bigger(tableNum));
+console.log(isIntArray(tableStrings));
+console.log(isStringArray(tableStrings));
