@@ -1,24 +1,14 @@
-let personalDatas = [
-    {
-        Nom : "Collignon",
-        Prenom : "Baptsite",
-        Age : 24,
-        DateDeNaissance : "15/09/1995"
-    },
-    {
-        Nom : "Zblah",
-        Prenom : "Jean-Charles",
-        Age : 64,
-        DateDeNaissance : "15/09/1956"
-    }
-];
+let table = [1,2,5,7,684512,23,0,654,8];
 
-function idCard(datas){
-    for (const person of datas) {
-        for (const property in person) {
-            console.log(`${property}: ${person[property]}`);
+function bigger (table){
+    let isBigger = 0;
+
+    for (const value of table) {
+        if(value > isBigger){
+            isBigger = value;
         }
-        console.log("---------------");
     }
+    return isBigger;
 }
-idCard(personalDatas);
+
+console.log(bigger(table));
