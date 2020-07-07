@@ -1,15 +1,7 @@
-var chaine = "";
-for (var i = 1; i < 10; i ++){
-    if ( i % 2 === 0){
-        for(var j = 0; j < 17; j ++){
-            (j % 2 !== 0 ? chaine += "#" : chaine += " " );
-        }
-        chaine +="\n";
-    }else{
-        for(var j = 0; j < 17; j ++){
-            (j % 2 === 0 ? chaine += "#" : chaine += " " );
-        }
-        chaine +="\n";
+for (var i =0; i < 5; i ++){
+    for (var j = 0; j < 5; j ++){
+        if ( i === j ){console.log("1");}
+        else{console.log("0");}
+        if (j === 4 ){console.log("-----------");}
     }
 }
-console.log(chaine);
