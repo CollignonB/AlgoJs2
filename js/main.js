@@ -1,7 +1,6 @@
-for (var i =0; i < 5; i ++){
-    for (var j = 0; j < 5; j ++){
-        if ( i === j ){console.log("1");}
-        else{console.log("0");}
-        if (j === 4 ){console.log("-----------");}
-    }
+function isEven(number){
+    var int = Math.round(number);
+    return int % 2 === 0 ? true : false;
 }
+
+console.log(isEven(prompt("rentrez un nombre : ")));
