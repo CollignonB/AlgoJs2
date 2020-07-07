@@ -3,6 +3,20 @@ let tableStrings = ["sbfg", "zgdnnh", "ugfmlkdfblpns","za", "wzexrctubyiregfdghs
 
 function bigger (table){
     let isBigger = 0;
+    if (isIntArray(table)){
+        let isBiggerChain = "";
+        for (const value of table) {
+            if(value.length > isBigger){
+                isBiggerChain = value;
+            }
+        }
+    }
+
+
+
+
+
+    
     console.log(typeof(table));
     for (const value of table) {
         if(value > isBigger){
@@ -25,5 +39,3 @@ function isStringArray(table){
 }
 
 console.log(bigger(tableNum));
-console.log(isIntArray(tableStrings));
-console.log(isStringArray(tableStrings));
