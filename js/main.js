@@ -1,13 +1,13 @@
-function facto (number){
-    let result = 1;
-    if (!Number.isInteger(number)){
-        return ("Erreur : veuillez rentrer un nombre entier");
-    }else{
-        for (let i = 1; i <= number; i++){
-            result *= i;
-        }
-    }
-    return result;
+function toUnderscore (chaine) {
+   if(typeof(chaine) !== "string"){
+       return "Erreur, veuillez rentrer une chaine de caractère valable"
+
+   }else{
+    return chaine.replace(/-/g, "_");
+   }
 }
 
-console.log(facto(4.1));
+let chaine = "Je-suis-un-chat";
+let pasChaine = 4;
+console.log(toUnderscore(pasChaine));
+console.log(toUnderscore(chaine));
