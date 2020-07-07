@@ -1,13 +1,18 @@
-function toUnderscore (chaine) {
-   if(typeof(chaine) !== "string"){
-       return "Erreur, veuillez rentrer une chaine de caractère valable"
+let mesCourses = [
+    "Pains",
+    "Nutella",
+    "Jambon",
+    "Yahourt",
+    "Pâtes complètes",
+    "Bacon",
+    "Steak",
+    "Pain à burger",
+    "Sauces"
+]
 
-   }else{
-    return chaine.replace(/-/g, "_");
-   }
+function oubliePas(course){
+    let dernier = course.length - 1;
+    console.log(`oublies pas les ${course[0]} , les ${course[dernier]} et les ${course[4]} !`);
 }
 
-let chaine = "Je-suis-un-chat";
-let pasChaine = 4;
-console.log(toUnderscore(pasChaine));
-console.log(toUnderscore(chaine));
+oubliePas(mesCourses);
