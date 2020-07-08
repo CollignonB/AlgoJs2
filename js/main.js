@@ -1,29 +1,24 @@
 let tableNum = [1,2,5,7,684512,23,0,654,8];
-let tableStrings = ["sbfg", "zgdnnh", "ugfmlkdfblpns","za", "wzexrctubyiregfdghsdf"];
+let tableStrings = ["sbfg","wzexrctubyiregfdghsdf", "zgdnnh", "ugfmlkdfblpns","za"];
 
 function bigger (table){
     let isBigger = 0;
-    if (isIntArray(table)){
+    if (isStringArray(table)){
         let isBiggerChain = "";
         for (const value of table) {
-            if(value.length > isBigger){
+            if(value.length > isBiggerChain.length){
                 isBiggerChain = value;
             }
         }
-    }
-
-
-
-
-
-    
-    console.log(typeof(table));
-    for (const value of table) {
-        if(value > isBigger){
-            isBigger = value;
+        return isBiggerChain;
+    }else if(isIntArray(table)){
+        for (const value of table) {
+            if(value > isBigger){
+                isBigger = value;
+            }
         }
+        return isBigger;
     }
-    return isBigger;
 }
 
 function isIntArray(table){
@@ -38,4 +33,4 @@ function isStringArray(table){
     }
 }
 
-console.log(bigger(tableNum));
+console.log(bigger(tableStrings));
